@@ -1,0 +1,121 @@
+@import "../../../../styles/common.scss";
+.stockers-bay-photo-grid {
+}
+
+.grid-layout {
+  // min-height: 1500px;
+  overflow: auto;
+  overflow-x: hidden;
+  :first-child {
+    margin-top: 0;
+  }
+}
+
+.grid-item {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #929796;
+  background-color: #333;
+  border-radius: 5px;
+  height: 180px;
+}
+.each-row {
+  display: flex;
+  height: 225px;
+  margin: 10px 0;
+  width: 100%;
+  transition: all 0.4s;
+  div {
+    transition: all 0.5s;
+    margin: 0 10px 0 0;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    .color-overlay {
+      @include image-card-overlay;
+    }
+  }
+  :last-child {
+    margin: 0 0 0 0px;
+  }
+  img {
+    margin: 0 10px 0 0;
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  :last-child {
+    margin: 0 0 0 0px;
+  }
+}
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 4;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 4;
+  column-gap: 5px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #photos {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+.masonry-with-columns {
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    height: 150px;
+    line-height: 150px;
+    background: #ec985a;
+    color: white;
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 2rem;
+    flex: 1 0 auto;
+  }
+  //   @for $i from 1 through 36 {
+  //     div:nth-child(#{$i}) {
+  //       $h: (random(400) + 70) + px;
+  //       width: $h;
+  //     }
+  //   }
+}

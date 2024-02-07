@@ -1,0 +1,135 @@
+@import "../../../../styles/variables.scss";
+
+.pc-app-header-cont {
+  width: 100%;
+  display: flex;
+  color: $default-pc-color;
+  position: relative;
+  z-index: 2;
+}
+.pc-hdr {
+  height: 44px;
+  line-height: 44px;
+  width: 100vw;
+  // background: $default-pc-background;
+  // background: rgb(83, 131, 7);
+  color: rgb(54, 54, 54) !important;
+  padding: 0 1.5em;
+  display: flex;
+  font-family: "Roboto-Regular";
+  align-items: center;
+  a {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(54, 54, 54) !important;
+    padding-left: 3px;
+  }
+  .app-header-icon {
+    background: url(../../../../images/PhotosBayHeader-Copy-1.svg);
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    cursor: pointer;
+  }
+}
+.pc-hdr-menu {
+  margin-left: auto;
+  display: flex;
+}
+.sign-in-opt {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
+  // z-index: 101;
+  &:hover {
+    // background: $default-pc-hovercolor;
+    background: #f0f0f0;
+  }
+  svg {
+    margin-left: 4px;
+  }
+}
+.sign-in-menu-down {
+  transition: transform 0.6s ease-in-out;
+}
+.sign-in-menu-up {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+.hdr-drpdwn-cont {
+  font-family: $app-font-regular;
+  position: absolute;
+  display: flex;
+  top: 44px;
+  right: 0px;
+  // background: rgb(224, 233, 170);
+  background: #d9d9d9;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px -3px grey;
+  -webkit-box-shadow: 0 4px 10px -3px grey;
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  z-index: 101;
+  overflow: auto;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  height: auto;
+  visibility: visible;
+}
+.hdr-drpdwn-cont-close {
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.65, -0.01, 0.26, 1);
+}
+.hdr-drpdwn-cont-open {
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.65, -0.01, 0.26, 1);
+  transform: scaleX(1);
+}
+.sign-elem {
+  padding: 0 1em 0 1em;
+}
+.sign-elem-hdr {
+  font-size: 2em;
+  font-weight: 600;
+}
+.hdr-drpdwn-cont-page-mask {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.publish-btn {
+  padding: 0 0.5em;
+  cursor: pointer;
+  &:hover {
+    background: $default-pc-hovercolor;
+  }
+}
+.publish-btn-disabled {
+  padding: 0 0.5em;
+  cursor: not-allowed;
+}
+.slcted-pagetab {
+  background: $default-pc-hovercolor;
+}
+.notification-dot {
+  height: 5px;
+  width: 5px;
+  background: #d96c47;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
